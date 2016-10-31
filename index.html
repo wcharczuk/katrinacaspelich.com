@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" ng-app="katrinaApp">
+<head>
+    <title></title><!-- TODO: fill this in. -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <meta name="author" content="https://twitter.com/willcharczuk" />
+    <meta name="description" content="" /> <!-- TODO: fill this in. -->
+
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- build:css css/app.min.css -->
+    <link rel="stylesheet" href="source/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="source/css/site.css"/>
+    <!-- /build -->
+
+    <!-- build:js js/app.min.js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript">var $ = jQuery;</script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="source/js/app.js"></script>
+    <script src="source/js/controllers.js"></script>
+    <script type="text/javascript" src="source/js/jquery.easing.min.js"></script>
+    <link rel="stylesheet" href="source/css/supersized.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="source/css/supersized.shutter.css" type="text/css" media="screen">
+    <script type="text/javascript" src="source/js/supersized.js"></script>
+    <script type="text/javascript" src="source/js/supersized.slideshow.js"></script>
+    <!-- /build -->
+
+    <script type="text/javascript">       
+    jQuery(function($){
+        
+        $.supersized({
+
+            slideshow               :   1,
+            autoplay                :   1,
+            slide_interval          :   3000,       // slide interval in ms
+
+            transition              :   1,          // fade
+            transition_speed        :   1000,       // transition speed
+
+            // Size & Position                         
+            min_width               :   0,          // Min width allowed (in pixels)
+            min_height              :   0,          // Min height allowed (in pixels)
+            vertical_center         :   1,          // Vertically center background
+            horizontal_center       :   1,          // Horizontally center background
+            fit_always              :   0,          // Image will never exceed browser width or height (Ignores min. dimensions)
+            fit_portrait            :   0,          // Portrait images will not exceed browser height
+            fit_landscape           :   1,          // Landscape images will not exceed browser width
+                                                       
+            // Components
+            slides                  :   [           // Slideshow Images
+                                                {image : 'images/1.jpg', title : 'Image Credit: Katrina Caspelich'},
+                                                {image : 'images/2.jpg', title : 'Image Credit: Katrina Caspelich'},  
+                                                {image : 'images/3.jpg', title : 'Image Credit: Katrina Caspelich'},
+                                                {image : 'images/4.jpg', title : 'Image Credit: Katrina Caspelich'},
+                                        ],
+        });
+    });
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>
+                    <a class="navbar-brand" href="#">Katrina Caspelich</a>
+                </div>
+                <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="about-nav"><a href="#/about">About</a></li>
+                        <li class="articles-nav"><a href="#/articles">Articles</a></li>
+                        <li class="public_relations-nav"><a href="#/public_relations">Public Relations</a></li>
+                        <li class="design-nav"><a href="#/design">Design</a></li>
+                        <li><a href="http://kissandwear.com" target="_blank">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="content" ng-view></div>
+        <div id="footer">
+            <span>&copy; Katrina Caspelich 2014</span>
+            <span class="pull-right">built with love by <a href="https://twitter.com/willcharczuk" target="_blank">@willcharczuk</a></span>
+        </div>
+    </div>
+
+    <!-- compiled and minified bootstrap -->
+    <script type="text/javascript">
+        $(".navbar-nav > li > a").off('click').on('click', function() {
+            $(".navbar-nav > li").removeClass("active");
+            $(this).parent().addClass("active");
+            return true;
+        });
+    </script>
+</body>
+</html>
