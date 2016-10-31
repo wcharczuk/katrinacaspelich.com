@@ -36764,8 +36764,8 @@ katrinaApp.config(["$routeProvider",
 				templateUrl: 'partials/about.html',
 				controller: 'katrinaController'
 			}).
-			when("/articles", {
-				templateUrl: 'partials/articles.html',
+			when("/content", {
+				templateUrl: 'partials/content.html',
 				controller: 'katrinaController'
 			}).
 			when("/design", {
