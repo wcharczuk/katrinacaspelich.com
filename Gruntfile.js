@@ -46,10 +46,6 @@ module.exports = function(grunt) {
             }
         },
 
-        cssmin: {
-            "dist/css/app.min.css" : ["dist/css/app.css"]
-        },
-
         processhtml : {
             dist : {
                 options : {
@@ -115,7 +111,7 @@ module.exports = function(grunt) {
     grunt.registerTask(
         'build', 
         'Compiles all of the assets and copies the files to the build directory.', 
-        [ 'clean:build', 'concat:app',  'uglify:app', 'concat:css', 'cssmin', 'processhtml:dist', 'cachebreaker:dist', 'copy:dist' ]
+        [ 'clean:build', 'concat:app',  'uglify:app', 'concat:css', 'processhtml:dist', 'cachebreaker:dist', 'copy:dist' ]
     );
 
 	grunt.registerTask(
